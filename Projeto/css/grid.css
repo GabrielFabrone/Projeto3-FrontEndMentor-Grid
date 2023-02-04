@@ -1,0 +1,149 @@
+body {
+    margin: 4rem 0;
+    background-color: var(--cinza-azulado);
+    color: var(--branco);
+    font-weight: 500;
+}
+
+.principal {
+    display: grid;
+    justify-content: center;
+    row-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 350px);
+}
+
+.card {
+    justify-self: center;
+    background-color: var(--violeta);
+    width: 90vw;
+    max-width: 340px;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* BACKGROUND DE CADA CARD */
+.principal .card2 {
+    background-color: var(--azul-escuro-fraco);
+}
+
+.principal .card3 {
+    background-color: var(--branco);
+}
+
+.principal .card4{
+    background-color: var(--azul-escuro-forte);
+}
+
+.principal .card5 {
+    background-color: var(--branco);
+}
+
+.titulo-container {
+    margin-bottom: 1.5rem
+}
+
+.perfil-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.link1::after {
+    content: "❝";
+    font-size: 15rem;
+    opacity: 0.3;
+    position: absolute;
+    left: 200px;
+    top: -35px;
+}
+
+.perfil-link__imagem {
+    width: 2rem;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-link__nome {
+    font-size: .8rem;
+    padding-bottom: .2rem;
+}
+
+.perfil-link__descricao {
+    color: var(--cinza-claro);
+    font-size: .9em;
+    font-weight: 300;
+}
+.card__texto{
+    margin-bottom: 1rem;
+}
+.card__texto--titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+.card__texto--descricao {
+    font-weight: 300;
+    color: var(--cinza-claro);
+    line-height: 1.2rem;
+}
+
+/* COR DE CADA TEXTO DO CARD */
+.card3 .coralt, .card5 .coralt {
+    color: var(--azul-escuro-fraco);
+}
+
+@media screen and (min-width:1440px) {
+
+    .principal {
+        grid-template-columns: repeat(4, 20%);
+        grid-template-rows: 45% 45%;
+        grid-template-areas:
+        "card1 card1 card2 card5"
+        "card3 card4 card4 card5";
+        gap: 2rem;
+
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .card1 {
+        grid-area: card1;
+    }
+
+    .card2 {
+        grid-area: card2;
+    }
+
+    .card3 {
+        grid-area: card3;
+    }
+
+    .card4 {
+        grid-area: card4;
+    }
+
+    .card5 {
+      grid-area: card5;
+    }
+
+    .link1::after {
+        content: "❝";
+        font-size: 20rem;
+        opacity: 0.3;
+        position: absolute;
+        left: 400px;
+        top: -45px;
+    }
+}
